@@ -16,6 +16,6 @@ router.use(
 router.use("/api/auth", authRouter);
 
 router.use('/api-docs', swaggerUi.serve);
-router.get('/api-docs', swaggerUi.setup(swaggerDoc));
+router.get('/api-docs', swaggerUi.setup(swaggerDoc, {customCssUrl: "/css/style.css"}));
 
 export { router };

@@ -18,6 +18,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static(__dirname + "/../public"));
 app.use(passport.initialize());
 app.use((req, res, next) => {
     console.log(
